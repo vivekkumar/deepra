@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
+// const Schema = mongoose.Schema;
+// const ObjectId = Schema.ObjectId;
 
 
 const username = "vivekkumarbt";
-const password = "bluedog123";
+const password = "pari123";
 const dbUrl = `mongodb://${username}:${password}@ds217002.mlab.com:17002/dpradb`;
-mongoose.connect('dbUrl');
+console.log(dbUrl)
+mongoose.connect(dbUrl, { useNewUrlParser: true });
 
 
 // Get Mongoose to use the global promise library
